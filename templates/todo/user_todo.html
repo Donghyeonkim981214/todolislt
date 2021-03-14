@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}TodoList{% endblock %}
+
+{% block extra-style %}
+<style>
+    .list_group{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .todolist{
+        min-width: 380px;
+        width: 30vw;
+    }
+    .buttons{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .todo_content{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        height: 35px;
+        width: 160px;
+    }
+    .todo_create{
+        margin: 10px 0;
+        margin-left: 30px;
+    }
+    .day{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-bottom: 5px;
+        align-items: flex-end;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="todo_create">
+    <form action="{% url 'todo:create' %}" method="GET">
+        <button type="submit" class="btn btn-outline-info btn-lg">Create Todo</button>
+    </form>
+</div>
+<div class="list_group">
+{% include "todo/todo_list.html" with subtitle="Doing" todo_list=doing type="home" %}
+{% include "todo/todo_list.html" with subtitle="Success" todo_list=success type="home" %}
+{% include "todo/todo_list.html" with subtitle="Fail" todo_list=fail type="home" %}
+</div>
+
+{% endblock content %}

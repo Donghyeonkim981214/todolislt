@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+
+{% block title %}Edit Todo{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Edit Todo</h1>
+
+    {% if form.errors %}
+    <div class="alert alert-danger">
+        <div class="font-weight-bold">Wrong! Please correct the error(s) below.</div>
+        {{ form.errors }}
+    </div>
+    {% endif %}
+
+    <form action="{% url 'todo:update' todo.id %}" method="post" class="card pt-3">{% csrf_token %}
+
+        <div class="form-group row">
+            {{ form.content|add_label_class:"col-form-label col-sm-3 ml-3 font-weight-bold" }}
+            <div class="col-sm-5">
+                {{ form.content|add_class:"form-control"|attr:"autofocus" }}
+            </div>
+        </div>
+        <div class="form-group row">
+            {{ form.deadline|add_label_class:"col-form-label col-sm-3 ml-3 font-weight-bold" }}
+            <div class="col-sm-5">
+                {{ form.deadline|add_class:"form-control" }}
+            </div>
+        </div>       
+
+        <div class="form-group">
+            <div class="offset-sm-3 col-sm-5">
+                <input type="submit" value="Edit" class="btn btn-info"/>
+            </div>
+        </div>
+
+    </form>
+</div>
+{% endblock %}
+

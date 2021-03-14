@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+
+{% block title %}Todo{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Todo</h1>
+    <div class="card">
+        <div class="card-body row">
+            <h3 class = "col-sm-3 ml-3">content</h2>
+            <div class="col-sm-5 mt-2">
+                {{ todo.content }}
+            </div>
+        </div>
+        <div class="card-body row">
+            <h3 class = "col-sm-3 ml-3">posted_day</h2>
+            <div class="col-sm-5 mt-2">
+                {{ todo.posted_day }}
+            </div>
+        </div>
+        {% if user.is_authenticated %}
+        {% if todo.success %}
+        <div class="card-body row">
+            <h3 class = "col-sm-3 ml-3">success_day</h2>
+            <div class="col-sm-5 mt-2">
+                {{ todo.success_day }}
+            </div>
+        </div>
+        {% endif %}
+        {% if todo.deadline %}
+        <div class="card-body row">
+            <h3 class = "col-sm-3 ml-3">deadline</h2>
+            <div class="col-sm-5 mt-2">
+                {{ todo.deadline }}
+            </div>
+        </div>
+        {% endif %}
+        {% endif %}
+
+        {% if todo.success == False %}
+        <div class="form-group offset-sm-3 col-sm-5">
+            <form action="{% url 'todo:update' todo.id %}" method="GET">
+                <button type="submit"  aria-label="Close" class="btn btn-info">
+                    Todo Update
+                </button>
+              </form>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,45 @@
+{% load todo_tags %}
+
+<div class="card mx-3 todolist">
+    <div class="card-header">
+      <h2>{{ subtitle }}</h2>
+    </div>
+    <div class="card-body">
+        <div class="list-group">
+        {% for todo in todo_list %}
+        <a href="{% url 'todo:detail' todo.id %}" class="list-group-item list-group-item-action mb-3">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1 todo_content">{{ todo.content }}</h5>
+                <div class="day">
+                <small class="text-muted">{{ todo.posted_day | days_past }} days ago</small>
+                {% if todo.deadline %}
+                <small class="text-muted">{{ todo.deadline | days_until }} days left</small>
+                {% endif %}
+                </div>
+              </div>
+              <div class = "buttons">
+              {% if subtitle == "Doing" %}
+              <form action="{% url 'todo:success' todo.id %}" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ request.get_full_path }}">
+                <button type="submit"  aria-label="Close" class="btn btn-outline-success">
+                    <i class="fas fa-check"></i>
+                </button>
+              </form>
+              {% endif %}
+              <form action="{% url 'todo:delete' todo.id %}" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ request.get_full_path }}">
+                <button type="submit"  aria-label="Close" class="btn btn-outline-danger ml-1">
+                    <i class="fas fa-trash"></i>
+                </button>
+              </form>
+              </div>
+        </a>
+        {% endfor %}
+        </div>
+      {% if type == "home" %}
+      <a href="{% url 'todo:list' subtitle %}" class="btn btn-primary">All {{ subtitle }}</a>
+      {% endif %}
+    </div>
+</div>
