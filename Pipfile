@@ -6,6 +6,11 @@ name = "pypi"
 [packages]
 django = "*"
 black = "*"
+pymysql = "*"
+django-widget-tweaks = "*"
+boto3 = "*"
+django-storages = "*"
+django-dotenv = "*"
 
 [dev-packages]
 flake8 = "*"

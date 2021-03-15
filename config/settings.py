@@ -21,12 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '5d+a&4^zq^io6c5sn=*o=(mjw6lgy1r559iv%%-@d2ottsb_0e'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.elasticbeanstalk.com', '192.168.56.101', 'localhost', '127.0.0.1', ]
 
 
 # Application definition
@@ -47,6 +47,8 @@ PROJECT_APPS =[
 
 THIRDPARTY_APPS = [
     'widget_tweaks',
+    'storages',
+
 ]
 
 INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + THIRDPARTY_APPS
@@ -87,8 +89,15 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.environ.get('DATABASE_NAME'),
+        'USER': os.environ.get('DATABASE_USER'),
+        'PASSWORD': os.environ.get('DATABASE_PASSWORD'),
+        'HOST': 'django-mysql-8020.ctq1yaril3q0.ap-northeast-2.rds.amazonaws.com',
+        'PORT': '3306',
+        'OPTOINS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        },
     }
 }
 
@@ -117,7 +126,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
 
@@ -131,6 +140,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 #AUTH
 from django.urls import reverse_lazy
 
@@ -141,3 +156,13 @@ LOGIN_REDIRECT_URL = reverse_lazy('todo:home')
 LOGIN_URL = reverse_lazy('user:login')
 
 LOGOUT_REDIRECT_URL = reverse_lazy('home:home')
+
+STATICFILES_STORAGE = 'config.storage.S3StaticStorage'
+DEFAULT_FILE_STORAGE = 'config.storage.S3MediaStorage'
+
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_S3_REGION_NAME = 'ap-northeast-2'
+AWS_STORAGE_BUCKET_NAME = 'todolist-renewal-bucket'
+AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.{AWS_S3_REGION_NAME}.amazonaws.com"
+AWS_DEFAULT_ACL = 'public-read'
