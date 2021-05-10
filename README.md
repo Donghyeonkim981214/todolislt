@@ -1,4 +1,4 @@
-# Restaurant-Share
+# ToDoList_Renewal
 
 ## 0. 목차
 1. 프로젝트 소개
