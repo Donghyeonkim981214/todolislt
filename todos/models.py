@@ -3,9 +3,6 @@ from users import models as user_models
 
 from django.urls import reverse
 
-import datetime
-
-
 # Create your models here.
 class Todo(models.Model):
     """ Todo model """
@@ -17,4 +14,4 @@ class Todo(models.Model):
     created_by = models.ForeignKey(user_models.User, on_delete=models.CASCADE, null = True, blank = True)
 
     def get_absolute_url(self):
-        return reverse("home:TodoDetail", kwargs={"pk": self.pk})
+        return reverse("todo:detail", kwargs={"pk": self.pk})

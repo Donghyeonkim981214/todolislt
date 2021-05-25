@@ -7,7 +7,7 @@
     <div class="card-body">
         <div class="list-group">
         {% for todo in todo_list %}
-        <a href="{% url 'todo:detail' todo.id %}" class="list-group-item list-group-item-action mb-3">
+        <a href="{{ todo.get_absolute_url }}" class="list-group-item list-group-item-action mb-3">
             <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1 todo_content">{{ todo.content }}</h5>
                 <div class="day">
