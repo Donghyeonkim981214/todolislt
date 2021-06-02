@@ -3,65 +3,19 @@
 
 {% block title %}TodoList{% endblock %}
 
-{% block extra-style %}
-<style>
-    .list_group{
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-    .todolist{
-        min-width: 380px;
-        width: 50vw;
-    }
-    .buttons{
-        display: flex;
-        justify-content: flex-end;
-    }
-    .todo_content{
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        height: 35px;
-        width: 160px;
-    }
-    .todo_create{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .day{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        margin-bottom: 5px;
-        align-items: flex-end;
-    }
-    .todo_input{
-        min-width: 380px;
-    }
-</style>
-{% endblock %}
-
 {% block content %}
-<div class="todo_create">
-    {% if form.errors %}
-        <div class="alert alert-danger">
-            <div class="font-weight-bold">Wrong! Please correct the error(s) below.</div>
-            {{ form.errors }}
-        </div>
-    {% endif %}
-    <form action="{% url 'todo:create' %}" method="POST" class="w-50 todo_input">{% csrf_token %}
-        <div class="input-group mb-2">
-            {{ form.content|add_class:"form-control"|attr:"autofocus"|attr:"rows:1" }}
-            <div class="input-group-append">
-                <button class="btn btn-success" type="submit">+</button>
+<section class="text-center container pt-4 sticky-top">
+    <div class="pt-5">
+        <form action="{% url 'todo:create' %}" method="POST" >{% csrf_token %}
+            <div class="input-group mb-2">
+                {{ form.content|add_class:"form-control"|attr:"autofocus"|attr:"rows:1" }}
+                <div class="input-group-append">
+                    <button class="btn btn-success" type="submit"><i class="bi bi-plus-square"></i></button>
+                </div>
             </div>
-        </div>
-    </form>    
-</div>
+        </form>
+    </div>
+</section>
 
-<div class="list_group">
 {% include "todo/todo_list.html" with subtitle="ToDo" todo_list=guest_todo type="guest" %}
-</div>
 {% endblock content %}

@@ -42,14 +42,7 @@ class UserDetailView(LoginRequiredMixin, UserOnlyView, DetailView):
 class UserUpdateView(LoginRequiredMixin, UpdateView):
     model = user_models.User
     template_name = "users/profile_update.html"
-    fields = (
-        "first_name",
-        "last_name",
-        "email",
-        "gender",
-        "bio",
-        "birthday",
-    )
+    form_class = user_forms.ProfileForm
 
     def get_object(self, queryset=None):
         return self.request.user

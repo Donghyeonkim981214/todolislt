@@ -47,9 +47,15 @@ PROJECT_APPS =[
 
 THIRDPARTY_APPS = [
     'widget_tweaks',
+    'crispy_forms',
+    "crispy_bootstrap5",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + THIRDPARTY_APPS
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -141,3 +147,5 @@ LOGIN_REDIRECT_URL = reverse_lazy('todo:home')
 LOGIN_URL = reverse_lazy('user:login')
 
 LOGOUT_REDIRECT_URL = reverse_lazy('home:home')
+
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'

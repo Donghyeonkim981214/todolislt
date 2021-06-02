@@ -1,0 +1,385 @@
+새 볼륨 볼륨에 대한 폴더 경로의 목록입니다.
+볼륨 일련 번호는 B270-5A9D입니다.
+E:.
+│  .env
+│  .gitignore
+│  db.sqlite3
+│  manage.py
+│  outtext.txt
+│  Pipfile
+│  Pipfile.lock
+│  README.md
+│  
+├─.ebextensions
+│      django.config
+│      
+├─.git
+│  │  COMMIT_EDITMSG
+│  │  config
+│  │  description
+│  │  FETCH_HEAD
+│  │  HEAD
+│  │  index
+│  │  ORIG_HEAD
+│  │  
+│  ├─branches
+│  ├─hooks
+│  │      applypatch-msg.sample
+│  │      commit-msg.sample
+│  │      fsmonitor-watchman.sample
+│  │      post-update.sample
+│  │      pre-applypatch.sample
+│  │      pre-commit.sample
+│  │      pre-push.sample
+│  │      pre-rebase.sample
+│  │      pre-receive.sample
+│  │      prepare-commit-msg.sample
+│  │      update.sample
+│  │      
+│  ├─info
+│  │      exclude
+│  │      
+│  ├─logs
+│  │  │  HEAD
+│  │  │  
+│  │  └─refs
+│  │      │  stash
+│  │      │  
+│  │      ├─heads
+│  │      │      AWS-deploy
+│  │      │      master
+│  │      │      
+│  │      └─remotes
+│  │          └─origin
+│  │                  AWS-deploy
+│  │                  master
+│  │                  
+│  ├─objects
+│  │  ├─01
+│  │  │      e02241c5f5ab3c11364e45c20c772f68b8b2bb
+│  │  │      
+│  │  ├─04
+│  │  │      136bfa86f6a7b22ac0c905353c68f1b00f44a6
+│  │  │      
+│  │  ├─0a
+│  │  │      e68863fe547ecccad171608fe7a70f5fb3f895
+│  │  │      
+│  │  ├─0b
+│  │  │      4e98414e225cc292b6c1a5247e2c8b28fca728
+│  │  │      
+│  │  ├─10
+│  │  │      e8d115e702df8fa615e801f1ae129a2674c064
+│  │  │      
+│  │  ├─11
+│  │  │      4a63a4d9674988199c96b688264126fe954166
+│  │  │      
+│  │  ├─16
+│  │  │      193907b0373a9c79958e8caa0b0e3745c741dc
+│  │  │      
+│  │  ├─19
+│  │  │      2aaab615d584a2327c8fcd2ddaff01a546ca14
+│  │  │      
+│  │  ├─1a
+│  │  │      7d4697dcdc308be96d96d317fb3a028669a690
+│  │  │      
+│  │  ├─1c
+│  │  │      e8f8da612214b3e72bb98f0a85ef24b417d072
+│  │  │      
+│  │  ├─24
+│  │  │      44220089b2755be1831692b43850f4d7976209
+│  │  │      
+│  │  ├─2d
+│  │  │      a93c8f1e06d5dc90ee126ed73a4cf7d03d5308
+│  │  │      
+│  │  ├─2e
+│  │  │      97d55f1e6d80b1a8a1b7a663700334f5c20f79
+│  │  │      
+│  │  ├─30
+│  │  │      774ddd677a11be70e9afb4892760038b582fa4
+│  │  │      
+│  │  ├─32
+│  │  │      725a48b2a8dee01e37b073936a531dee52fe73
+│  │  │      
+│  │  ├─38
+│  │  │      cd7aafd4b075f84241525cf383f0b131bb45c7
+│  │  │      
+│  │  ├─3e
+│  │  │      869cfc64a42d2ca05f2a11f44d1f7a885df21d
+│  │  │      
+│  │  ├─3f
+│  │  │      0f20c4136f036b18e78403ad5786f23d5d414b
+│  │  │      b5a8763f4eb8c5f513ce3585a93e845d070257
+│  │  │      
+│  │  ├─46
+│  │  │      e2e275cab0d5b9918fe2777c510f86bf9fed63
+│  │  │      
+│  │  ├─47
+│  │  │      f669887be8ae203a4a25185727485080fba838
+│  │  │      
+│  │  ├─4c
+│  │  │      12f8341dfa50ad29dce7a093915f5ec8b5cf96
+│  │  │      
+│  │  ├─4d
+│  │  │      4b2c20b9760058ad3fd0289d483603a43a9235
+│  │  │      
+│  │  ├─4f
+│  │  │      3fa34a7daeec0c45105dfbad6b08ce07c21562
+│  │  │      f9bdfda2504b684cd5e89c2539ee1a083338f6
+│  │  │      
+│  │  ├─51
+│  │  │      59790a58fd92f1b69b58e092ab55855acf3745
+│  │  │      
+│  │  ├─53
+│  │  │      cafdfba92446438dd54efe41bb7a7220a40d6a
+│  │  │      
+│  │  ├─5c
+│  │  │      fe7bb768710f309d00304d0fe17cc4c6322eed
+│  │  │      
+│  │  ├─5f
+│  │  │      540b5979cbb9e97cd39e55fe0bf90e67c094c4
+│  │  │      
+│  │  ├─65
+│  │  │      e230d929dbbfb76f0ecdd6794dd819037c6e9e
+│  │  │      
+│  │  ├─68
+│  │  │      57d252df60a9fc8dc872c3f8a908fe6b28c621
+│  │  │      
+│  │  ├─6c
+│  │  │      7f24b55b0507c322c9f5f1446e813e99d4a65b
+│  │  │      
+│  │  ├─6d
+│  │  │      39651ff01104829d8c7de9daad6ba36913a621
+│  │  │      48078176b5c32179c5a0dc32730c8f610eca0a
+│  │  │      
+│  │  ├─70
+│  │  │      331c458ec16f496d2326dc44316ff3956e88a1
+│  │  │      
+│  │  ├─71
+│  │  │      a9e93abb5b77eddbe55ae95784da3c4f5e9ebf
+│  │  │      
+│  │  ├─73
+│  │  │      a5515da34ae93503cf60c8b67adb8afa7d414e
+│  │  │      
+│  │  ├─74
+│  │  │      828509093dc6340b9ea54ce03db093bcd1a0fd
+│  │  │      b58e56582ba5e136d9c3443ad9614d681e753c
+│  │  │      
+│  │  ├─75
+│  │  │      2d067978f35082563178ab88345b1886a18928
+│  │  │      
+│  │  ├─7c
+│  │  │      d9f0572bc70f5ff93e4f2695fabfe7a6d0e88b
+│  │  │      
+│  │  ├─80
+│  │  │      09ac4f1a2ebe08a978cd5f3212fe7a43e5d6db
+│  │  │      
+│  │  ├─83
+│  │  │      2c3d48f4b7e750e155c44eaa746e32712ab0fc
+│  │  │      
+│  │  ├─86
+│  │  │      2ec24dca48fe31afcbb09f945730992f51307b
+│  │  │      
+│  │  ├─91
+│  │  │      68c40e2fc3e49be874eeddb92015db34b2f7f1
+│  │  │      97d18653eb299a3d22e1ae86710f7e9917e546
+│  │  │      
+│  │  ├─92
+│  │  │      3a041ec4b2dcc7a03511110ba7ab1f3a64721c
+│  │  │      
+│  │  ├─97
+│  │  │      029c84b269916169874488a2c06040e4d1e7d9
+│  │  │      
+│  │  ├─98
+│  │  │      b6e66847761f143effad78cf2b5f8f9a81eb8b
+│  │  │      
+│  │  ├─9a
+│  │  │      1b2feb3692b498e04e44e03b8a36124001c7b1
+│  │  │      c1defcb28989844dd7a85d025e4c1d40cc59af
+│  │  │      
+│  │  ├─9d
+│  │  │      1dcfdaf1a6857c5f83dc27019c7600e1ffaff8
+│  │  │      
+│  │  ├─a3
+│  │  │      09923268060690cca6dae7478ac8340d71782b
+│  │  │      cb16360457147f38f1d6f852307f5fde75a68f
+│  │  │      
+│  │  ├─a8
+│  │  │      5465bad2a0cae8c885a66642dffeb4e13b19c9
+│  │  │      
+│  │  ├─aa
+│  │  │      60bed871c7d5c87f5a243972afeacad22709d2
+│  │  │      
+│  │  ├─ab
+│  │  │      54c7caccf3d3d6b77c7fa3ad7a2965189acb75
+│  │  │      
+│  │  ├─ae
+│  │  │      fe3a29717edac5ebea4d2dea12f46de7741f9a
+│  │  │      
+│  │  ├─b5
+│  │  │      e89388147391276511f50d86ab11ef654a0aa0
+│  │  │      
+│  │  ├─b6
+│  │  │      596ed8b274f8a7ccdaf6ac7963cb1538e65eaf
+│  │  │      
+│  │  ├─b9
+│  │  │      ac2253b7e134f87cf839aabecd44cf5eb91561
+│  │  │      
+│  │  ├─bc
+│  │  │      3ce0ab8257d06e8466832f968c8193fdbbac82
+│  │  │      
+│  │  ├─be
+│  │  │      89361fa99fe7bd6bd35ac54b516870e84664ac
+│  │  │      
+│  │  ├─c5
+│  │  │      6e94bd01cfadc460ffb5ffe50c66e9287d6492
+│  │  │      
+│  │  ├─c9
+│  │  │      48ca0b294f22a6cc5034ce36e8f2083b49b1ab
+│  │  │      7757414a4efd3caf01523b850b204542501470
+│  │  │      991e8882693a7cd082a9b290df504bfba41c18
+│  │  │      
+│  │  ├─cd
+│  │  │      f20a9afbd9a167606491e022eacd16dc67c02e
+│  │  │      
+│  │  ├─ce
+│  │  │      7bae90b3eca7eb574c1b5eb996d54c8253db7d
+│  │  │      
+│  │  ├─d0
+│  │  │      12b9f01d3920001290a7480160b1dd7e61e6b7
+│  │  │      
+│  │  ├─d9
+│  │  │      bf89856821cb445dc25256409c994fea519dfe
+│  │  │      
+│  │  ├─dd
+│  │  │      75b06b2e7ee10deedea30f0be28dad301ee247
+│  │  │      ae58ad06c6832ef82da46d9f27d0cd03c543a3
+│  │  │      
+│  │  ├─de
+│  │  │      8bdc00eb2fed53494a534d48e400faa830dbd9
+│  │  │      ca62ef881e722ac1b810c3d4287fde781c0a90
+│  │  │      
+│  │  ├─e0
+│  │  │      f8a3c5b9820f513880a3f857bbbbbcf7a7624c
+│  │  │      
+│  │  ├─e3
+│  │  │      02569fab4ac740b9b3c1ea814a341ae1440c5f
+│  │  │      76a5e80fb7a188d60340537ba32bf113d1db8d
+│  │  │      
+│  │  ├─e5
+│  │  │      d9dbc76ed66876992d0c4fe3c718e66cf78071
+│  │  │      
+│  │  ├─e6
+│  │  │      9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+│  │  │      
+│  │  ├─ea
+│  │  │      5d68b7c457cb7f92da9c00a5c4df77ace36cef
+│  │  │      
+│  │  ├─ee
+│  │  │      475a2c8e3ed440e7b8fa5ec7e5f2996a089a35
+│  │  │      876c64fb7c106b123f8d5622a166cced65ed68
+│  │  │      
+│  │  ├─f5
+│  │  │      28baef2fcf62f7e2a5a61643a3e35c21555a9e
+│  │  │      
+│  │  ├─f7
+│  │  │      3e57213fcfd26948670e7c6c788de2c79fd375
+│  │  │      
+│  │  ├─fd
+│  │  │      18c6eac0dc9ffbdf025c31d136901350a0d9f2
+│  │  │      7381e21dcd2d00855890e43c3ca238c47f3387
+│  │  │      
+│  │  ├─info
+│  │  └─pack
+│  └─refs
+│      │  stash
+│      │  
+│      ├─heads
+│      │      AWS-deploy
+│      │      master
+│      │      
+│      ├─remotes
+│      │  └─origin
+│      │          AWS-deploy
+│      │          master
+│      │          
+│      └─tags
+├─.vscode
+│      settings.json
+│      
+├─config
+│      asgi.py
+│      settings.py
+│      urls.py
+│      wsgi.py
+│      __init__.py
+│      
+├─home
+│  │  admin.py
+│  │  apps.py
+│  │  mixins.py
+│  │  models.py
+│  │  tests.py
+│  │  urls.py
+│  │  views.py
+│  │  __init__.py
+│  │  
+│  └─migrations
+│          __init__.py
+│          
+├─media
+├─static
+├─templates
+│  │  base.html
+│  │  home.html
+│  │  
+│  ├─todo
+│  │      create.html
+│  │      detail.html
+│  │      guest_todo.html
+│  │      list.html
+│  │      todo_list.html
+│  │      update.html
+│  │      user_todo.html
+│  │      
+│  └─users
+│          login.html
+│          password_update.html
+│          profile.html
+│          profile_update.html
+│          signup.html
+│          
+├─todos
+│  │  admin.py
+│  │  apps.py
+│  │  forms.py
+│  │  mixins.py
+│  │  models.py
+│  │  tests.py
+│  │  urls.py
+│  │  views.py
+│  │  __init__.py
+│  │  
+│  ├─migrations
+│  │      0001_initial.py
+│  │      __init__.py
+│  │      
+│  └─templatetags
+│          todo_tags.py
+│          __init__.py
+│          
+└─users
+    │  admin.py
+    │  apps.py
+    │  forms.py
+    │  mixins.py
+    │  models.py
+    │  tests.py
+    │  urls.py
+    │  views.py
+    │  __init__.py
+    │  
+    └─migrations
+            0001_initial.py
+            0002_auto_20210311_1921.py
+            __init__.py
+            

@@ -2,45 +2,11 @@
 
 {% block title %}{{sub}} list{% endblock %}
 
-{% block extra-style %}
-<style>
-    .list_group{
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-    .todolist{
-        min-width: 380px;
-        width: 30vw;
-    }
-    .buttons{
-        display: flex;
-        justify-content: flex-end;
-    }
-    .todo_content{
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        height: 35px;
-        width: 160px;
-    }
-    .day{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        margin-bottom: 5px;
-        align-items: flex-end;
-    }
-</style>
-{% endblock %}
-
 {% block content %}
 
-<div class="list_group">
 {% include "todo/todo_list.html" with subtitle=sub todo_list=todo_list type="list" %}
-</div>
 
-<nav aria-label="Page navigation example">
+<!-- <nav aria-label="Page navigation example">
     <ul class="pagination justify-content-center">
         {% if page_obj.has_previous %}
         <li class="page-item">
@@ -56,6 +22,6 @@
         <li class="page-item"><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a></li>
         {% endif %}
     </ul>   
-</nav>
+</nav> -->
 
 {% endblock content %}

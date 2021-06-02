@@ -23,7 +23,7 @@
               <p class="card-text">기록한 할 일들이 저장되지 않습니다.
                 <br>그리고 할 일들을 기록하는 것 외에 추가적인 기능을 제공하지 않습니다.</p>
             </div>
-            <button type="button" class="btn btn-outline-warning my-3" data-toggle="modal" data-target="#guestmode">
+            <button type="button" class="btn btn-outline-warning my-3" data-bs-toggle="modal" data-bs-target="#guestmode">
                 Start Guest Mode
               </button>
         </div>
@@ -36,7 +36,7 @@
                 <br>2. Success: Doing에 저장된 할 일들 중 성공처리가 된 할 일.
                 <br>3. Fail: Doing에 저장된 할 일들 중 마감기한이 지난 할 일.</p>
             </div>
-            <button type="button" class="btn btn-outline-info my-3" data-toggle="modal" data-target="#usermode">
+            <button type="button" class="btn btn-outline-info my-3" data-bs-toggle="modal" data-bs-target="#usermode">
                 Start User Mode
               </button>
         </div>
@@ -48,15 +48,13 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Guest Mode</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body text-center  ">
           Guset Mode로 시작하시겠습니까?
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           <div class="start_btn">
             <form action="{% url 'todo:guest' %}" method="GET">
                 <button type="submit" class="btn btn-warning text-white">Start</button>
@@ -72,15 +70,13 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">User Mode</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body text-center">
           User Mode로 시작하시겠습니까?
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           <div class="start_btn">
             <form action="{% url 'user:login' %}" method="GET">
                 <button type="submit" class="btn btn-info text-white">Start</button>

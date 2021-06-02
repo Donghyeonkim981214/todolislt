@@ -1,79 +1,18 @@
 {% extends "base.html" %}
 {% load widget_tweaks %}
+{% load crispy_forms_tags %}
 
 {% block title %}Sign up{% endblock %}
 
+
 {% block content %}
-<div class="container">
-    <h1>New User Registration</h1>
-    <p class="font-italic">Please enter your username and password twice.</p>
+<main class="container overflow-auto mt-5">
+  <div class="p-3 bg-body rounded shadow-sm h-100 mb-5">
+  
+    <h1>Welcom ToDoList</h1>
 
-    {% if form.errors %}
-    <div class="alert alert-danger">
-        <div class="font-weight-bold">Wrong! Please correct the error(s) below.</div>
-        {{ form.errors }}
-    </div>
-    {% endif %}
-
-    <form action="." method="post" class="card pt-3">{% csrf_token %}
-
-        <div class="form-group row">
-            {{ form.username|add_label_class:"col-form-label col-sm-3 ml-3 font-weight-bold" }}
-            <div class="col-sm-5">
-                {{ form.username|add_class:"form-control"|attr:"autofocus" }}
-            </div>
-        </div>
-        <div class="form-group row">
-            {{ form.password|add_label_class:"col-form-label col-sm-3 ml-3 font-weight-bold" }}
-            <div class="col-sm-5">
-                {{ form.password|add_class:"form-control" }}
-            </div>
-        </div>
-        <div class="form-group row">
-            {{ form.check_password|add_label_class:"col-form-label col-sm-3 ml-3 font-weight-bold" }}
-            <div class="col-sm-5">
-                {{ form.check_password|add_class:"form-control" }}
-            </div>
-        </div>
-        <div class="form-group row">
-            {{ form.first_name|add_label_class:"col-form-label col-sm-3 ml-3 font-weight-bold" }}
-            <div class="col-sm-5">
-                {{ form.first_name|add_class:"form-control" }}
-            </div>
-        </div>
-        <div class="form-group row">
-            {{ form.last_name|add_label_class:"col-form-label col-sm-3 ml-3 font-weight-bold" }}
-            <div class="col-sm-5">
-                {{ form.last_name|add_class:"form-control" }}
-            </div>
-        </div>
-        <div class="form-group row">
-            {{ form.email|add_label_class:"col-form-label col-sm-3 ml-3 font-weight-bold" }}
-            <div class="col-sm-5">
-                {{ form.email|add_class:"form-control" }}
-            </div>
-        </div>
-        <div class="form-group row">
-            {{ form.gender|add_label_class:"col-form-label col-sm-3 ml-3 font-weight-bold" }}
-            <div class="col-sm-5">
-                {{ form.gender|add_class:"form-control" }}
-            </div>
-        </div>
-        <div class="form-group row">
-            {{ form.birthday|add_label_class:"col-form-label col-sm-3 ml-3 font-weight-bold" }}
-            <div class="col-sm-5">
-                {{ form.birthday|add_class:"form-control" }}
-            </div>
-        </div>
-        
-
-        <div class="form-group">
-            <div class="offset-sm-3 col-sm-5">
-                <input type="submit" value="Register" class="btn btn-info"/>
-            </div>
-        </div>
-
-    </form>
+    {% crispy form %}
+  
 </div>
+</main>
 {% endblock %}
-
